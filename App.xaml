@@ -4,10 +4,10 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
-            <!-- Modern Color Palette -->
-            <SolidColorBrush x:Key="PrimaryBrush" Color="#0078D4"/>
-            <SolidColorBrush x:Key="SecondaryBrush" Color="#106EBE"/>
-            <SolidColorBrush x:Key="AccentBrush" Color="#00BCF2"/>
+            <!-- Modern Color Palette - Updated Theme -->
+            <SolidColorBrush x:Key="PrimaryBrush" Color="#9C27B0"/>
+            <SolidColorBrush x:Key="SecondaryBrush" Color="#7B1FA2"/>
+            <SolidColorBrush x:Key="AccentBrush" Color="#E91E63"/>
             <SolidColorBrush x:Key="BackgroundBrush" Color="#F3F3F3"/>
             <SolidColorBrush x:Key="SurfaceBrush" Color="#FFFFFF"/>
             <SolidColorBrush x:Key="TextBrush" Color="#333333"/>
