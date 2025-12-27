@@ -1,0 +1,120 @@
+<Window x:Class="AutoUpdateDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Auto Update Demo - Home" 
+        Height="600" 
+        Width="900"
+        Background="{StaticResource BackgroundBrush}"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Border Grid.Row="0" Background="{StaticResource PrimaryBrush}" 
+                BorderThickness="0,0,0,2" BorderBrush="{StaticResource SecondaryBrush}">
+            <Grid Margin="30,0">
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock Text="Auto Update Demo Application" 
+                               FontSize="28" 
+                               FontWeight="Bold" 
+                               Foreground="White"/>
+                    <TextBlock x:Name="VersionText" 
+                               Text="Version 1.0.0" 
+                               FontSize="14" 
+                               Foreground="#E0E0E0"
+                               Margin="0,5,0,0"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- Content Area -->
+        <Grid Grid.Row="1" Margin="30">
+            <Border Background="{StaticResource SurfaceBrush}" 
+                    CornerRadius="8" 
+                    BorderThickness="1" 
+                    BorderBrush="{StaticResource BorderBrush}"
+                    Padding="40">
+                <Border.Effect>
+                    <DropShadowEffect Color="#E0E0E0" 
+                                      BlurRadius="15" 
+                                      ShadowDepth="2" 
+                                      Opacity="0.3"/>
+                </Border.Effect>
+                
+                <StackPanel VerticalAlignment="Center">
+                    <!-- Welcome Icon -->
+                    <Viewbox Width="100" Height="100" Margin="0,0,0,30">
+                        <Canvas Width="100" Height="100">
+                            <Ellipse Width="100" Height="100" Fill="{StaticResource AccentBrush}" Opacity="0.2"/>
+                            <Path Data="M50,30 L50,70 M30,50 L70,50" 
+                                  Stroke="{StaticResource PrimaryBrush}" 
+                                  StrokeThickness="6" 
+                                  StrokeLineCap="Round"/>
+                        </Canvas>
+                    </Viewbox>
+
+                    <!-- Welcome Text -->
+                    <TextBlock Text="Welcome to Auto Update Demo" 
+                               FontSize="32" 
+                               FontWeight="SemiBold" 
+                               Foreground="{StaticResource TextBrush}"
+                               HorizontalAlignment="Center"
+                               Margin="0,0,0,15"/>
+                    
+                    <TextBlock Text="This application demonstrates automatic updates from GitHub releases" 
+                               FontSize="16" 
+                               Foreground="#666666"
+                               HorizontalAlignment="Center"
+                               TextWrapping="Wrap"
+                               TextAlignment="Center"
+                               MaxWidth="600"
+                               Margin="0,0,0,40"/>
+
+                    <!-- Action Buttons -->
+                    <StackPanel Orientation="Horizontal" 
+                                HorizontalAlignment="Center" 
+                                Margin="0,20,0,0">
+                        <Button x:Name="CheckUpdateButton" 
+                                Content="Check for Updates" 
+                                Style="{StaticResource ModernButton}"
+                                Click="CheckUpdateButton_Click"
+                                Margin="0,0,15,0"/>
+                        
+                        <Button x:Name="AboutButton" 
+                                Content="About" 
+                                Style="{StaticResource ModernButton}"
+                                Background="#6C757D"
+                                Click="AboutButton_Click"/>
+                    </StackPanel>
+
+                    <!-- Status Text -->
+                    <TextBlock x:Name="StatusText" 
+                               Text="" 
+                               FontSize="14" 
+                               Foreground="{StaticResource PrimaryBrush}"
+                               HorizontalAlignment="Center"
+                               Margin="0,30,0,0"
+                               TextWrapping="Wrap"
+                               TextAlignment="Center"
+                               MaxWidth="600"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <!-- Footer -->
+        <Border Grid.Row="2" Background="{StaticResource SurfaceBrush}" 
+                BorderThickness="0,1,0,0" BorderBrush="{StaticResource BorderBrush}">
+            <TextBlock Text="© 2025 Auto Update Demo. Powered by GitHub Releases" 
+                       FontSize="12" 
+                       Foreground="#999999"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
+        </Border>
+    </Grid>
+</Window>
