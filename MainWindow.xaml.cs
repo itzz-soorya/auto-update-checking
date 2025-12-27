@@ -13,8 +13,8 @@ namespace AutoUpdateDemo
         {
             InitializeComponent();
             
-            // Initialize auto updater - REPLACE WITH YOUR GITHUB REPO
-            _autoUpdater = new AutoUpdater("YOUR_GITHUB_USERNAME", "YOUR_REPO_NAME");
+            // Initialize auto updater
+            _autoUpdater = new AutoUpdater("itzz-soorya", "auto-update-checking");
             
             // Display current version
             var version = Assembly.GetExecutingAssembly().GetName().Version;
