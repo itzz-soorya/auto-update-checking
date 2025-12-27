@@ -54,8 +54,7 @@
                             <Ellipse Width="100" Height="100" Fill="{StaticResource AccentBrush}" Opacity="0.2"/>
                             <Path Data="M50,30 L50,70 M30,50 L70,50" 
                                   Stroke="{StaticResource PrimaryBrush}" 
-                                  StrokeThickness="6" 
-                                  StrokeLineCap="Round"/>
+                                  StrokeThickness="6"/>
                         </Canvas>
                     </Viewbox>
 
